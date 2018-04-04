@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="u_task" max_length="40" name="x_180060_my_angula_u_task" type="collection"/>
+</database>

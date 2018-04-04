@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_rel_widget_clone">
+    <sp_rel_widget_clone action="INSERT_OR_UPDATE">
+        <child display_value="Custom Widget">10dc53badb830300ab8dfe1ebf961948</child>
+        <cloned>2017-12-19 10:30:15</cloned>
+        <last_validated>2017-12-19 10:30:15</last_validated>
+        <parent display_value="Stock">b8c1c333d7123100a9ad1e173e24d45e</parent>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;sp_widget&gt;&lt;category&gt;standard&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[function() {	
+	var c = this;
+	c.update = function() {
+		c.data.price = false;
+		c.server.get({symbol: c.data.symbol}).then(function(r) {			
+			c.data.price = r.data.price;			
+		});
+	}
+}]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css/&gt;&lt;data_table&gt;sp_instance&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list/&gt;&lt;has_preview&gt;false&lt;/has_preview&gt;&lt;id&gt;widget-stock&lt;/id&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link/&gt;&lt;name&gt;Stock&lt;/name&gt;&lt;option_schema/&gt;&lt;public&gt;true&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[data.typeSymbolMsg = gs.getMessage("Type stock symbol");
+if (input) {
+	var r = new RESTMessage('Yahoo Finance', 'get');
+	r.setStringParameter('symbol', input.symbol);
+	var response = r.execute();
+	data.price = response.getBody();
+}]]&gt;&lt;/script&gt;&lt;servicenow&gt;true&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2015-02-24 23:23:08&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;false&lt;/sys_customer_update&gt;&lt;sys_id&gt;b8c1c333d7123100a9ad1e173e24d45e&lt;/sys_id&gt;&lt;sys_mod_count&gt;85&lt;/sys_mod_count&gt;&lt;sys_name&gt;Stock&lt;/sys_name&gt;&lt;sys_package display_value="Service Portal - Core" source="com.glide.service-portal"&gt;9329f2aedb030300ab8dfe1ebf9619ab&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_b8c1c333d7123100a9ad1e173e24d45e&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2017-08-24 19:15:05&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;div&gt;${Symbol Lookup}: &lt;input ng-model="c.data.symbol" ng-model-options="{debounce: 750}" ng-change="c.update()" placeholder="{{::data.typeSymbolMsg}}" /&gt;
+&lt;div ng-show="c.data.symbol" style="font-size: 2em;"&gt;        
+  &lt;p&gt;${Stock Price}: &lt;span ng-if="!c.data.price"&gt;${Requesting stock price}&lt;/span&gt;&lt;span&gt;{{c.data.price | currency:"$"}}&lt;/span&gt;&lt;/p&gt;
+ &lt;img ng-src="http://chart.finance.yahoo.com/z?s={{c.data.symbol}}&amp;t=1d&amp;z=l"/&gt;
+&lt;/div&gt;
+&lt;/div&gt;]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;</payload>
+        <sys_class_name>sp_rel_widget_clone</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-12-19 10:30:15</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>50dc53badb830300ab8dfe1ebf96194c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>10dc53badb830300ab8dfe1ebf961948</sys_name>
+        <sys_package display_value="My Angular Application" source="x_180060_my_angula">fb6da2a6db030300ab8dfe1ebf9619b1</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="My Angular Application">fb6da2a6db030300ab8dfe1ebf9619b1</sys_scope>
+        <sys_update_name>sp_rel_widget_clone_50dc53badb830300ab8dfe1ebf96194c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-12-19 10:30:15</sys_updated_on>
+    </sp_rel_widget_clone>
+</record_update>

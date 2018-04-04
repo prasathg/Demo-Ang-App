@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-12-21 12:36:48</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>a1fc066bdb470300ab8dfe1ebf9619a1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_180060_my_angula_my_task.x_180060_my_angula.test_tasks_user</sys_name>
+        <sys_package display_value="My Angular Application" source="x_180060_my_angula">fb6da2a6db030300ab8dfe1ebf9619b1</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="My Angular Application">fb6da2a6db030300ab8dfe1ebf9619b1</sys_scope>
+        <sys_security_acl display_value="x_180060_my_angula_my_task">69fc066bdb470300ab8dfe1ebf96199e</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_a1fc066bdb470300ab8dfe1ebf9619a1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-12-21 12:36:48</sys_updated_on>
+        <sys_user_role display_value="x_180060_my_angula.test_tasks_user" name="x_180060_my_angula.test_tasks_user">5dfc062bdb470300ab8dfe1ebf961923</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>
